@@ -10,8 +10,8 @@ const transporter = nodemailer.createTransport({
 });
 
 transporter.sendMail({
-  from: 'test@example.com',
-  to: 'you@example.com',
+  from: 'manan.losthub.xyz',
+  to: 'mananbajaj0807@gmail.com',
   subject: 'SMTP Test',
   text: 'This is a test email from local SMTP server'
 }, (err, info) => {
