@@ -1,29 +1,23 @@
 const nodemailer = require('nodemailer');
-
+//Update
 const transporter = nodemailer.createTransport({
-  host: 'mail.losthub.xyz', 
-  port: 25,                     
-  secure: false,              
-  auth: {
-    user: '', 
-    pass: ''
-  },
+  host: '54.227.121.116',
+  port: 2525,
+  secure: false,
   tls: {
-    rejectUnauthorized: false 
+    rejectUnauthorized: false
   }
 });
 
-const mailOptions = {
-  from: '"Manan Bajaj" <manan@losthub.xyz>', // Must match your domain
-  to: 'mananbajaj0807@gmail.com',
-  subject: 'Hello from EC2 SMTP Server',
-  text: 'This is a test message sent from my custom SMTP server.',
-  html: '<p>This is a <b>test email</b> sent from my EC2 SMTP server.</p>'
-};
-
-transporter.sendMail(mailOptions, (error, info) => {
-  if (error) {
-    return console.error('Error sending mail:', error);
+transporter.sendMail({
+  from: 'test@example.com',
+  to: 'you@example.com',
+  subject: 'SMTP Test',
+  text: 'This is a test email from local SMTP server'
+}, (err, info) => {
+  if (err) {
+    console.error('Error sending mail:', err);
+  } else {
+    console.log('Mail sent:', info);
   }
-  console.log(' Message sent successfully:', info.response);
 });
