@@ -21,7 +21,7 @@ rl.question('Please enter the recipient email address: ', (toEmail) => {
 
   // Send email
   transporter.sendMail({
-    from: 'manan.losthub.xyz',
+    from: 'manan@losthub.xyz',
     to: toEmail,
     subject: 'SMTP Test',
     text: 'This is a test email from local SMTP server'
