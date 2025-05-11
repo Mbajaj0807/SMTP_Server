@@ -11,7 +11,7 @@ const rl = readline.createInterface({
 rl.question('Please enter the recipient email address: ', (toEmail) => {
   // Create transporter
   const transporter = nodemailer.createTransport({
-    host: '54.227.121.116',
+    host: '13.202.25.222',
     port: 2525,
     secure: false,
     tls: {
